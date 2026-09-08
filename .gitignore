@@ -4,3 +4,4 @@ scripts/crypto/__pycache__/
 *.patch
 *.rej
 *.orig
+build/boot.img

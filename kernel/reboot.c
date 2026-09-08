@@ -79,6 +79,12 @@ void kernel_restart_prepare(char *cmd)
 	device_shutdown();
 }
 
+__weak int ksu_handle_sys_reboot(int magic1, int magic2, unsigned int cmd,
+				     void __user **arg)
+{
+	return 0;
+}
+
 /**
  *	register_reboot_notifier - Register function to be called at reboot time
  *	@nb: Info about notifier function to be called

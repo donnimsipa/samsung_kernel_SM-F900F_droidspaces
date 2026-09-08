@@ -57,7 +57,7 @@ build_boot(){
     # unpack, replace, pack using boot_editor_v15_r1
     cd "${KERNEL_ROOT}/prebuilts/boot_editor_v15_r1" && \
         ./gradlew unpack
-        cp -f "${KERNEL_ROOT}/build/Image-dtb" build/unzip_boot/kernel -Force && \
+        cp -f "${KERNEL_ROOT}/build/Image-dtb" build/unzip_boot/kernel && \
         ./gradlew pack && \
         mv boot.img.signed "${KERNEL_ROOT}/build/boot.img" && \
         git clean -xfd || true
