@@ -1,9 +1,13 @@
 .idea
 .gradle
+
 build/
-__pycache__
-build/unzip_boot/ramdisk.img
-build/unzip_boot/ramdisk.img.lz4
+!build/
+build/*
+!build/unzip_boot/
+!build/unzip_boot/**
+
+**pycache**
 recovery.img.clear
 recovery.img.google
 recovery.img.signed
