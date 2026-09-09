@@ -37,7 +37,7 @@ build_kernel(){
     # make "${BUILD_OPTIONS[@]}" clean && make "${BUILD_OPTIONS[@]}" mrproper
     
     # Make default configuration: base defconfig + custom.config + droidspaces.config
-    make "${BUILD_OPTIONS[@]}" winnerlte_eur_open_defconfig
+    make "${BUILD_OPTIONS[@]}" winnerlte_eur_open_defconfig custom.config
 
     # Configure the kernel (TUI) when not in GitHub Actions
     if [ -z "${GITHUB_ACTIONS}" ]; then
